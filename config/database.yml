@@ -26,7 +26,7 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: tracking_pro_test
+  database: tracking_pro_test_new
   pool: 5
   username: root
   password:
