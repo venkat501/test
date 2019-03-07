@@ -1,0 +1,67 @@
+default: &default
+  adapter: mysql2
+  host: localhost # Override where needed
+  database: orders_management
+  port: 3306
+  username: root
+  password: 
+  encoding: utf8
+  reconnect: false
+  timeout: 5000
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  min_messages: ERROR
+  # socket: /tmp/mysql.sock
+
+development:
+  <<: *default
+
+production:
+  <<: *default
+  
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  host: localhost
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: tracking_pro_test
+  pool: 5
+  username: root
+  password:
+
+
+
+# default: &default
+#   adapter: mysql2
+#   host: 45.76.190.63 #localhost # Override where needed
+#   database: staging_trackingo
+#   port: 3306
+#   username: staging_db
+#   password: Staging28Pwd02DB
+#   encoding: utf8
+#   reconnect: false
+#   timeout: 5000
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   min_messages: ERROR
+#   # socket: /tmp/mysql.sock
+
+# development:
+#   <<: *default
+
+# production:
+#   <<: *default
+
+# # Warning: The database defined as "test" will be erased and
+# # re-generated from your development database when you run "rake".
+# # Do not set this db to the same as development or production.
+# test:
+#   host: 45.76.190.63 #localhost
+#   adapter: mysql2
+#   encoding: utf8
+#   reconnect: false
+#   database: staging_trackingo
+#   pool: 5
+#   username: staging_db
+#   password: Staging28Pwd02DB
